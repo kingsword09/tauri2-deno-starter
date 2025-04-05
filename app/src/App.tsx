@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { invoke } from "@tauri-apps/api/core";
 import { add } from "@kingsword/add";
 import { ping } from "@kingsword/tauri-plugin-ping-api";
@@ -12,16 +12,10 @@ function App() {
   const [right, setRight] = useState(1);
 
   async function greet() {
+    const result = (await ping("test")) ?? "";
     // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-    setGreetMsg(await invoke("greet", { name }));
+    setGreetMsg(await invoke("greet", { name: name + result }));
   }
-
-  useEffect(() => {
-    const asyncPing = async () => {
-      await ping("test");
-    };
-    asyncPing();
-  }, []);
 
   return (
     <main className="container">
