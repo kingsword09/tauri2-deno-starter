@@ -15,6 +15,7 @@
 
 ## 项目结构
 
+```text
 tauri2-deno-starter/
 ├── app/                 # 应用主目录
 │   ├── src/             # 前端源代码
@@ -24,6 +25,7 @@ tauri2-deno-starter/
 ├── deno.json            # Deno配置文件
 ├── README.md            # 英文项目说明文档
 └── README_ZH.md         # 中文项目说明文档
+```
 
 ## 快速开始
 
@@ -73,9 +75,9 @@ cd plugins
 deno run -A npm:@tauri-apps/cli plugin new [plugin_name]
 ```
 
-2. 初始化的插件需要改为 ts 项目，默认是 js 项目
-3. 创建 deno.json 文件，插件目录和插件内`examples/tauri-app`内的测试项目也需要添加
-4. 添加到项目根目录的 deno.json 中
+2. 初始化的插件需要改为 ts 项目，默认是 js 项目；
+3. 创建 deno.json 文件，插件目录和插件内`examples/tauri-app`内的测试项目也需要添加；
+4. 添加到项目根目录的 deno.json 中。
 
 ```json
 {
@@ -89,6 +91,6 @@ deno run -A npm:@tauri-apps/cli plugin new [plugin_name]
 
 ## 发布
 
-1. deno 包可以发布到 [JSR](https://jsr.io)
-2. tauri plugins 中 TypeScript API 可以发布到[JSR](https://jsr.io)和 Rust 代码可以发布到[crates](https://crates.io)
+1. deno 包可以发布到 [JSR](https://jsr.io)；
+2. tauri plugins 中 TypeScript API 可以发布到[JSR](https://jsr.io)和 Rust 代码可以发布到[crates](https://crates.io)。
 
